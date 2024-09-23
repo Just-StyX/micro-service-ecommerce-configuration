@@ -6,8 +6,8 @@ eureka:
       default-zone: http://localhost:8071/eureka
 name:
   value: customer
-  
-spring:
-  cloud:
-    config:
-      override-system-properties: false
+
+#spring:
+#  cloud:
+#    config:
+#      override-system-properties: false
