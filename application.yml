@@ -3,11 +3,11 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      default-zone: http://localhost:8071/eureka
+      default-zone: http://localhost:8761/eureka
 name:
   value: customer
 
-#spring:
-#  cloud:
-#    config:
-#      override-system-properties: false
+spring:
+  cloud:
+    config:
+      override-system-properties: false
