@@ -26,4 +26,4 @@ application:
     product-url: http://localhost:8222/api/v1/products
 
 server:
-  port: 8074
+  port: 8075
