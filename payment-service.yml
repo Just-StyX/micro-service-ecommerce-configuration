@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/order
+    password: password
+    username: username
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        boot:
+          allow_jdbc_metadata_access: false
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: paymentNotificationRequest:com.jsl.payment_service.kafka.PaymentNotificationRequest
+
+application:
+  config:
+    product-url: http://localhost:8222/api/v1/products
+
+server:
+  port: 8074
