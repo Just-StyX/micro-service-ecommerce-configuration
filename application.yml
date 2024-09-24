@@ -5,8 +5,8 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
 
-#name:
-#  value: customer
+name:
+  value: jsl-group
 
 spring:
   cloud:
@@ -15,6 +15,9 @@ spring:
 
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
   endpoints:
     web:
       exposure:
